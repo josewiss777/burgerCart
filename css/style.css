@@ -1,0 +1,263 @@
+/* Universal */
+
+html {  
+    box-sizing: border-box; 
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Sarabun', sans-serif; 
+}
+img {   
+    max-width: 100%;
+    display: block;
+} 
+
+/* Header */
+
+.title {
+    margin: 0.7rem 0;
+    text-align: center;
+    font-size: 2.5rem;
+}
+@media( max-width: 420px ) {
+    .title {
+        font-size: 2rem;
+    }
+}
+.divTable {
+    position: absolute;
+    z-index: 1;
+    width: 46%;
+    left: calc(50% - 23%);
+    background-color: #fff;
+    padding: 1.5rem;
+    margin-top: 2.5rem;
+    border-radius: 0.6rem;
+    border: 0.5px solid #ccc7c7;
+    box-shadow: 0px 0px 10px 8px #808080;
+    display: none;
+}
+@media ( max-width: 720px ) {
+    .divTable {
+        width: 94%;
+        left: calc( 50% - 47% );
+    }
+}
+table {
+    width: 100%;
+    text-align: center;
+}
+@media ( max-width: 420px ) {
+    table {
+        font-size: 0.7rem;
+    }
+}
+th, td {
+    padding: 0.5rem 0.2rem;
+    border-bottom: 1px solid #000;
+}
+.btnDeleteCart,
+.input-card {
+    width: 100%;
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+    margin-top: 2rem;
+    padding: 0.4rem;
+    border: 0.5px solid #000;
+    border-radius: 0.3rem;
+    background-color: #fff;
+    transition: background-color 0.4s ease-out;
+    transition: color 0.4s ease-out;
+}
+.btnDeleteCart:hover,
+.input-card:hover {
+    background-color: #000;
+    color: #fff;
+}
+@media( max-width: 350px ) {
+    .btnDeleteCart,
+    .input-card {
+        margin-top: 0.8rem;
+    }
+}
+.paragraphTotal {
+    text-align: right;
+    margin-top: 1rem;
+    padding-right: 1rem;
+    font-weight: 700;
+}
+.listCart {
+    width: 5%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.container {
+    width: 100%;
+    height: 23rem;
+    margin-top: 2rem;
+    background-image: url( '../img/background.webp' );  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+}
+.container::before {
+    content: ' ';
+    background-color: #00000085;
+    position: absolute;  
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6;
+}
+.titleHeader {
+    position: relative; 
+    color: #fff;
+    text-align: center;
+    padding-top: 6rem;
+    font-size: 2.5rem;
+}
+@media( max-width: 400px ) {
+    .titleHeader{
+        font-size: 2rem;
+    }
+}
+.paragraphHeader{
+    position: relative;
+    background-color: #fff;
+    padding: 0.5rem;
+    width: 40%;
+    margin: 1.5rem auto;
+    border-radius: 0.8rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+@media( max-width: 720px ) {
+    .paragraphHeader {
+        font-size: 1.2rem;
+        width: 70%;
+    }
+}
+@media( max-width: 400px ) {
+    .paragraphHeader {
+        font-size: 1rem;
+    }
+}
+
+/* Content Burgers */
+
+.titleContent {
+    text-align: center;
+    margin-top: 3.5rem;
+    font-size: 2rem;
+}
+@media ( max-width: 420px ) {
+    .titleContent {
+        font-size: 1.5rem;
+    }
+}
+.parrafoContent{
+    text-align: center;
+    color: #050da0;
+}
+@media ( max-width: 420px ) {
+    .parrafoContent {
+        font-size: 0.7rem;
+    }
+}
+.contentCards {
+    width: 90%;
+    margin: 3rem auto 1rem auto;
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 1rem;
+    row-gap: 3rem;
+    flex-wrap: wrap;
+}
+.card {
+    min-width: 20rem;
+    width: 30%;
+}
+@media( max-width: 350px ) {
+    .card {
+        min-width: 16rem;
+        width: 100%;
+    }
+}
+.card-img img {
+    height: 15rem;
+    width: 100%;
+    border-radius: 0.6rem;
+    object-fit: cover;
+    transition-property: transform;
+    transition-duration: 800ms;
+    cursor: pointer;
+}
+.card-img {
+    overflow: hidden;
+}
+.card-img:hover img {
+    transform: scale(1.2);
+}
+.card-info h4 {
+    margin-top: 0.7rem;
+}
+.card-info p {
+    font-size: 0.9rem;
+}
+.star {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.7rem 0;
+}
+.card .prices {
+    font-weight: 700;
+}
+
+/* Footer */
+
+.containerFooter {
+    height: 6rem;
+    border-top: 1px solid #000;
+    margin-top: 3rem;
+}
+.containerFooter p {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    padding-top: 2rem;
+}
+@media ( max-width: 560px ) {
+    .containerFooter p {
+        font-size: 1rem;
+    }
+}
+
+/* Classes for JS */
+
+.deletBurger {
+    color: red;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.3rem;
+    border: 1px solid #000;
+    border-radius: 30%;
+}
+.block {
+    display: block;
+}
+.imgB { 
+    margin: 0 auto;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.opacity {
+    opacity: .1; 
+}
