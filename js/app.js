@@ -111,6 +111,7 @@ function showCart() {
 }
 
 function deleteBurger(e) {
+    e.preventDefault();
     if(e.target.classList.contains('deletBurger')) {
         const burgerId = e.target.getAttribute('data-id')
         Cart = Cart.filter( burger => burger.id !== burgerId );
@@ -122,7 +123,14 @@ function deleteBurger(e) {
 function deleteCart() {
     Cart = []
     addHtml(Cart)
-    
+    messageSwet('Eliminando carrito...')
+    setTimeout(() => {
+        addCarts.forEach( ( cart ) => {
+            cart.disabled = false;
+        });
+        bgOpacity.classList.remove('opacity')
+        divCart.classList.remove('block')
+    }, 1000)
 }
 
 function cleanHTML() {
